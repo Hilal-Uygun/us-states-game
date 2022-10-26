@@ -16,10 +16,10 @@ while len(states_len) < 50:
     if answer == "Exit":
         for stt in states:
             if stt not in states_len:
-                missing_states.append(stt)
-        #print(missing_states)
+                missing_states.append(stt)           #this is for unwritten states
+
         new_data = pandas.DataFrame(missing_states)
-        new_data.to_csv("states_to_learn.csv")
+        new_data.to_csv("states_to_learn.csv")       #to create csv for unwritten states
         break
     for state_n in states:
         if answer == state_n:
@@ -32,14 +32,3 @@ while len(states_len) < 50:
             t.penup()
             t.goto(new_x, new_y)
             t.write(state_n)
-
-
-
-
-
-
-# def get_mouse_click_coor(x, y):
-#     print(x, y)
-# turtle.onscreenclick(get_mouse_click_coor)
-# turtle.mainloop()
-
